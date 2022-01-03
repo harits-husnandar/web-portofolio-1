@@ -1,0 +1,159 @@
+* {
+  font-family: "poppins", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background: #11052c;
+}
+
+.wrapper {
+  width: 2000px;
+  margin: auto;
+  position: relative;
+}
+
+.logo a {
+  font-size: 35px;
+  font-weight: 800;
+  float: left;
+  color: #ffe459;
+}
+
+.menu {
+  float: right;
+}
+
+nav {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  line-height: 80px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background: #11052c;
+  z-index: 1;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  color: #ffe459;
+  font-weight: bold;
+  text-align: center;
+  padding: 0px 16px;
+  font-size: 25px;
+}
+
+nav ul li a:hover {
+  color: #f43b86;
+}
+
+.hero img {
+  width: 580px;
+  height: 530px;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+section {
+  margin: auto;
+  display: flex;
+}
+
+.kolom {
+  margin-top: 120px;
+  margin-bottom: 50px;
+  margin-left: 60px;
+}
+
+.kolom h1 {
+  margin-bottom: 50px;
+  font-size: 40px;
+  color: #f43b86;
+}
+
+.kolom h4 {
+  color: #ffe459;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: -40px;
+  margin-bottom: 170px;
+}
+
+a.tbl-kon {
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+  padding: 20px 60px;
+  display: flex;
+  font-weight: 200;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  transition: 1s;
+  overflow: hidden;
+}
+
+a.tbl-kon:hover {
+  background: var(--clr);
+  box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr), 0 0 60px var(--clr),
+    0 0 100px var(--clr);
+}
+
+a.tbl-kon::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 600%;
+  background: var(--clr);
+  transition: 1s;
+  animation: animate 2s linear infinite;
+  animation-delay: calc(0.33s * var(--i));
+}
+
+a.tbl-kon:hover::before {
+  width: 120%;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+a.tbl-kon::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  background: #11052c;
+  transition: 0.5s;
+}
+
+a.tbl-kon:hover::after {
+  background: var(--clr);
+}
+
+a span {
+  position: relative;
+  z-index: 1;
+  font-size: 30px;
+  color: #ffe459;
+}
+
+p.about {
+  color: #ffe459;
+  font-size: 24px;
+}
